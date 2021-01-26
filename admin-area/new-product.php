@@ -3,19 +3,20 @@
 <html>
 <head>
 	<title>MyShop - Admin Area - Add Product </title>
+	<link rel="stylesheet" type="text/css" href="../styles/admin.css">
 </head>
 <body>
 
 	<form method="POST" action="new-prodcut.php" enctype="multipart/form-data">
 
-		<table width="700" align="center">
-			<tr>
-				<td><h2>Add New Product</h2></td>
+		<table width="700" align="center" cellpadding="4" >
+			<tr align="center">
+				<td colspan="2"><h2>Add New Product</h2></td>
 			</tr>
 
 			<tr>
 				<td><label>Product Title:</label></td>
-				<td><input type="text" name="p_title" /></td>
+				<td><input type="text" name="p_title" size="40" /></td>
 			</tr>
 
 			<tr>
@@ -80,11 +81,11 @@
 			</tr>
 			<tr>
 				<td><label>Product Description:</label></td>
-				<td><textarea name="p_desc"></textarea></td>
+				<td><textarea name="p_desc" cols="42" rows="5"></textarea></td>
 			</tr>
 			<tr>
 				<td><label>Product Keywords:</label></td>
-				<td><input type="text" name="p_keywords" /></td>
+				<td><input type="text" name="p_keywords" size="40" /></td>
 			</tr>
 
 			<tr>
@@ -107,6 +108,8 @@
 		</table>
 		
 	</form>
+
+	<a href="../">Back Home</a>
 
 </body>
 </html>

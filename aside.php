@@ -9,10 +9,12 @@
 			$brand_row = mysqli_query($con, $brandsql );
 
 			while ($brand = mysqli_fetch_assoc($brand_row)) { 
+
+				$bname = $brand["brand_name"];
+
+				echo "<li> <a href='$bname'>$bname</a></li>";
 				
-			?>
-				<li><a href="<?php echo $brand["brand_name"] ?>"><?php echo $brand["brand_name"] ?></a></li>				
-			<?php } ?>
+			} ?>
 		</ul>
 	</nav>
 
@@ -26,13 +28,15 @@
 
 			while ($cat = mysqli_fetch_assoc($cat_row)) { 
 
-			?>
-				<li><a href="<?php echo $cat["cat_name"] ?>"><?php echo $cat["cat_name"] ?></a></li>				
-			<?php } ?>
+				$cname = $cat["cat_name"];
+
+				echo "<li> <a href='$cname'>$cname</a></li>";
+
+		 } ?>
 			
 			
 		</ul>
 	</nav>
 
-	
+	<a href="admin-area/new-product.php"> Admin Area</a>
 </section>
